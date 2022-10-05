@@ -1,0 +1,54 @@
+package link_list;
+
+import java.util.Scanner;
+
+public class single_creation { // node creation
+  static class Node {
+    int data;
+    Node next;
+
+    Node(int data) {
+      this.data = data;
+      this.next = null;
+    }
+  }
+
+  Node head = null;// initial node value is null
+
+  public void single_creation() {
+    int data, n;
+    Scanner sc = new Scanner(System.in);
+    do {
+      System.out.print("Enter data for insertion ");
+      data = sc.nextInt();
+      Node new_node = new Node(data);
+      if (head == null) {
+        head = new_node;
+      } else {
+        new_node.next = head;
+        head = new_node;
+      }
+      System.out.println("Do you want to enter more data. If yes press 1");
+      n = sc.nextInt();
+    } while (n == 1);// while loop to enter data as much as user want
+  }
+
+  public void traverser() {
+    Node temp = head;
+    if (head == null) {
+      System.out.println("link list does not exist");
+    } else {
+      while (temp != null) {
+        System.out.print(temp.data + " ");
+        temp = temp.next;
+      }
+
+    }
+  }
+
+  public static void main(String args[]) {//
+    single_creation ll = new single_creation();
+    ll.single_creation();
+    ll.traverser(); // function call
+  }
+}
