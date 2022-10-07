@@ -5,7 +5,7 @@ class BinarySearch
     {
         while (low<=hi)
         {
-            int mid = (low+hi)/2;
+            int mid = (low+hi)/2; //dividing array into two parts.
             if (arr[mid]==key)
             return mid;
             if(arr[mid]<key)
@@ -17,7 +17,7 @@ class BinarySearch
     public static void main(String[] args)
     {
     BinarySearch ob= new BinarySearch();
-    int arr[]={2,3,5,6,8,9,10,13,15,17};
+    int arr[]={2,3,5,6,8,9,10,13,15,17};  // the array must be in a sorted form.
     int n= arr.length;
     System.out.println("The length of array is " +n);
     Scanner sc=new Scanner(System.in);
