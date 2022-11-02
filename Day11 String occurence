@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class occurenceofstring {
+    public static void main(String[] args) {
+        String str;
+        System.out.println("enter a string");
+        Scanner sc = new Scanner(System.in);
+        str = sc.nextLine();
+
+        int index = str.indexOf("VITBhopal");  //this field return the occurence of the string
+        int index1 = str.indexOf("Bhopal");
+
+        int count = 0; //initial occrence is 0
+        int count1 = 0;
+
+        while (index != -1) {
+            index = str.indexOf("VITBhopal", index + 1);
+            count++;ś
+
+        }
+        System.out.println("Occurence of String the " + count);
+
+        while (index1 != -1) {  // loop will terminate when the string is empty, till then it will enter the loop and value is incremented
+            index1 = str.indexOf("The", index1 + 1);
+            count1++;
+
+        }
+        System.out.println("Occurence of String The " + count1); // to print output
+
+    }
+
+}
