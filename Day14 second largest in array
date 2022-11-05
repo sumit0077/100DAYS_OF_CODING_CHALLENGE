@@ -1,0 +1,30 @@
+public class secondlargest {
+    public static void main(String[] args) {
+        int lar=0;
+        int seclar=0;
+        int maxname=-1;
+        int max2name=-1;
+
+        String[] arr2=new String[]{"Amit", " Vikas","Anil","Kamlesh","Suhani","Kavita","jalaj"};
+        int[] arr={341,273,329,445,402,388};
+        for(int i=0;i<arr.length; i++)
+        {
+            if(arr[i]>lar )
+            {
+                seclar=lar;
+                lar=arr[i];
+                maxname= i;
+            }
+            else if (arr[i]>seclar) {
+                seclar=arr[i];
+                max2name=i;
+
+            }
+
+        }
+        System.out.println("largest :"+arr2[maxname] +"  " +lar);
+
+        System.out.println("second largest:" +arr2[max2name] +"  "  +seclar);
+
+    }
+}
