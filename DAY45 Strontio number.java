@@ -1,5 +1,5 @@
 import java.util.*;  
-public class StrontioNumberExample1   https://github.com/sumit0077/100DAYS_OF_CODING_CHALLENGE/blob/main/DAY45.java%20Strontio%20number
+public class StrontioNumberExample1   
 {  
 public static void main(String args[])   
 {  
